@@ -1,9 +1,8 @@
-class Thread1 extends Thread {
-    @Override
-    public void run() {
+class Algorithm {
+    public void ALGORITHM(int start, int end) {
         int maxDivisors = 1;
         int numwithmax = 1;
-        for ( int count = 2;  count  <= 10000;  count ++ ) {
+        for ( int count = start;  count  <= end;  count ++ ) {
             int divisorCount = 0;
             for ( int count2 = 1;  count2 <= count;  count2++ ) {
                 if ( count % count2 == 0 )
@@ -17,9 +16,17 @@ class Thread1 extends Thread {
 
         }
 
-        System.out.println(Thread.currentThread().getName() +" to find the integer range 1 and 10000");
+        System.out.println(Thread.currentThread().getName() +" to find the integer range "+ start +" and "+ end);
         System.out.println("The maximum number of divisors are " + maxDivisors);
         System.out.println("A number with " + maxDivisors + " divisors is " + numwithmax);
+    }
+}
+
+class Thread1 extends Thread {
+    @Override
+    public void run() {
+        Algorithm algo = new Algorithm();
+        algo.ALGORITHM(1, 10000);
 
         Thread2 thread2 = new Thread2();
         thread2.start();
@@ -96,219 +103,57 @@ class Thread1 extends Thread {
 }class Thread2 extends Thread {
     @Override
     public void run() {
-        int maxDivisors = 1;
-        int numwithmax = 1;
-        for ( int count = 10001;  count  <= 20000;  count ++ ) {
-            int divisorCount = 0;
-            for ( int count2 = 1;  count2 <= count;  count2++ ) {
-                if ( count % count2 == 0 )
-                    divisorCount++;
-            }
-
-            if (divisorCount > maxDivisors) {
-                maxDivisors = divisorCount;
-                numwithmax = count;
-            }
-
-        }
-
-        System.out.println(Thread.currentThread().getName() +" to find the integer range 10001 and 20000");
-        System.out.println("The maximum number of divisors are " + maxDivisors);
-        System.out.println("A number with " + maxDivisors + " divisors is " +
-                numwithmax);
+        Algorithm algo = new Algorithm();
+        algo.ALGORITHM(10001, 20000);
     }
 }
 class Thread3 extends Thread {
     @Override
     public void run() {
-        int maxDivisors = 1;
-        int numwithmax = 1;
-        for ( int count = 20001;  count  <= 30000;  count ++ ) {
-            int divisorCount = 0;
-            for ( int count2 = 1;  count2 <= count;  count2++ ) {
-                if ( count % count2 == 0 )
-                    divisorCount++;
-            }
-
-            if (divisorCount > maxDivisors) {
-                maxDivisors = divisorCount;
-                numwithmax = count;
-            }
-
-        }
-
-        System.out.println(Thread.currentThread().getName() +" to find the integer range 20001 and 30000");
-        System.out.println("The maximum number of divisors are " + maxDivisors);
-        System.out.println("A number with " + maxDivisors + " divisors is " +
-                numwithmax);
+        Algorithm algo = new Algorithm();
+        algo.ALGORITHM(20001, 30000);
     }
 }class Thread4 extends Thread {
     @Override
     public void run() {
-        int maxDivisors = 1;
-        int numwithmax = 1;
-        for ( int count = 30001;  count  <= 40000;  count ++ ) {
-            int divisorCount = 0;
-            for ( int count2 = 1;  count2 <= count;  count2++ ) {
-                if ( count % count2 == 0 )
-                    divisorCount++;
-            }
-
-            if (divisorCount > maxDivisors) {
-                maxDivisors = divisorCount;
-                numwithmax = count;
-            }
-
-        }
-
-        System.out.println(Thread.currentThread().getName() +" to find the integer range 30001 and 40000");
-        System.out.println("The maximum number of divisors are " + maxDivisors);
-        System.out.println("A number with " + maxDivisors + " divisors is " +
-                numwithmax);
+        Algorithm algo = new Algorithm();
+        algo.ALGORITHM(30001, 40000);
     }
 }class Thread5 extends Thread {
     @Override
     public void run() {
-        int maxDivisors = 1;
-        int numwithmax = 1;
-        for ( int count = 40001;  count  <= 50000;  count ++ ) {
-            int divisorCount = 0;
-            for ( int count2 = 1;  count2 <= count;  count2++ ) {
-                if ( count % count2 == 0 )
-                    divisorCount++;
-            }
-
-            if (divisorCount > maxDivisors) {
-                maxDivisors = divisorCount;
-                numwithmax = count;
-            }
-
-        }
-
-        System.out.println(Thread.currentThread().getName() +" to find the integer range 40001 and 50000");
-        System.out.println("The maximum number of divisors are " + maxDivisors);
-        System.out.println("A number with " + maxDivisors + " divisors is " +
-                numwithmax);
+        Algorithm algo = new Algorithm();
+        algo.ALGORITHM(40001, 50000);
     }
 }class Thread6 extends Thread {
     @Override
     public void run() {
-        int maxDivisors = 1;
-        int numwithmax = 1;
-        for ( int count = 50001;  count  <= 60000;  count ++ ) {
-            int divisorCount = 0;
-            for ( int count2 = 1;  count2 <= count;  count2++ ) {
-                if ( count % count2 == 0 )
-                    divisorCount++;
-            }
-
-            if (divisorCount > maxDivisors) {
-                maxDivisors = divisorCount;
-                numwithmax = count;
-            }
-
-        }
-
-        System.out.println(Thread.currentThread().getName() +" to find the integer range 50001 and 60000");
-        System.out.println("The maximum number of divisors are " + maxDivisors);
-        System.out.println("A number with " + maxDivisors + " divisors is " +
-                numwithmax);
+        Algorithm algo = new Algorithm();
+        algo.ALGORITHM(50001, 60000);
     }
 }class Thread7 extends Thread {
     @Override
     public void run() {
-        int maxDivisors = 1;
-        int numwithmax = 1;
-        for ( int count = 60001;  count  <= 70000;  count ++ ) {
-            int divisorCount = 0;
-            for ( int count2 = 1;  count2 <= count;  count2++ ) {
-                if ( count % count2 == 0 )
-                    divisorCount++;
-            }
-
-            if (divisorCount > maxDivisors) {
-                maxDivisors = divisorCount;
-                numwithmax = count;
-            }
-
-        }
-
-        System.out.println(Thread.currentThread().getName() +" to find the integer range 60001 and 70000");
-        System.out.println("The maximum number of divisors are " + maxDivisors);
-        System.out.println("A number with " + maxDivisors + " divisors is " +
-                numwithmax);
+        Algorithm algo = new Algorithm();
+        algo.ALGORITHM(60001, 70000);
     }
 }class Thread8 extends Thread {
     @Override
     public void run() {
-        int maxDivisors = 1;
-        int numwithmax = 1;
-        for ( int count = 70001;  count  <= 80000;  count ++ ) {
-            int divisorCount = 0;
-            for ( int count2 = 1;  count2 <= count;  count2++ ) {
-                if ( count % count2 == 0 )
-                    divisorCount++;
-            }
-
-            if (divisorCount > maxDivisors) {
-                maxDivisors = divisorCount;
-                numwithmax = count;
-            }
-
-        }
-
-        System.out.println(Thread.currentThread().getName() +" to find the integer range 70001 and 80000");
-        System.out.println("The maximum number of divisors are " + maxDivisors);
-        System.out.println("A number with " + maxDivisors + " divisors is " +
-                numwithmax);
+        Algorithm algo = new Algorithm();
+        algo.ALGORITHM(70001, 80000);
     }
 }class Thread9 extends Thread {
     @Override
     public void run() {
-        int maxDivisors = 1;
-        int numwithmax = 1;
-        for ( int count = 80001;  count  <= 90000;  count ++ ) {
-            int divisorCount = 0;
-            for ( int count2 = 1;  count2 <= count;  count2++ ) {
-                if ( count % count2 == 0 )
-                    divisorCount++;
-            }
-
-            if (divisorCount > maxDivisors) {
-                maxDivisors = divisorCount;
-                numwithmax = count;
-            }
-
-        }
-
-        System.out.println(Thread.currentThread().getName() +" to find the integer range 80001 and 90000");
-        System.out.println("The maximum number of divisors are " + maxDivisors);
-        System.out.println("A number with " + maxDivisors + " divisors is " +
-                numwithmax);
+        Algorithm algo = new Algorithm();
+        algo.ALGORITHM(80001, 90000);
     }
 }class Thread10 extends Thread {
     @Override
     public void run() {
-        int maxDivisors = 1;
-        int numwithmax = 1;
-        for ( int count = 90001;  count  <= 100000;  count ++ ) {
-            int divisorCount = 0;
-            for ( int count2 = 1;  count2 <= count;  count2++ ) {
-                if ( count % count2 == 0 )
-                    divisorCount++;
-            }
-
-            if (divisorCount > maxDivisors) {
-                maxDivisors = divisorCount;
-                numwithmax = count;
-            }
-
-        }
-
-        System.out.println(Thread.currentThread().getName() +" to find the integer range 90001 and 100000");
-        System.out.println("The maximum number of divisors are " + maxDivisors);
-        System.out.println("A number with " + maxDivisors + " divisors is " +
-                numwithmax);
+        Algorithm algo = new Algorithm();
+        algo.ALGORITHM(90001, 100000);
     }
 }
 
