@@ -1,0 +1,56 @@
+Packet Tracer PC Command Line 1.0
+C:\>ping 172.31.0.294
+Ping request could not find host 172.31.0.294. Please check the name and try again.
+C:\>ping 172.31.0.254
+
+Pinging 172.31.0.254 with 32 bytes of data:
+
+Reply from 172.31.1.1: Destination host unreachable.
+Reply from 172.31.1.1: Destination host unreachable.
+Reply from 172.31.1.1: Destination host unreachable.
+Reply from 172.31.1.1: Destination host unreachable.
+
+Ping statistics for 172.31.0.254:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+C:\>ping 172.31.0.190
+
+Pinging 172.31.0.190 with 32 bytes of data:
+
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 172.31.0.190:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+C:\>ping 172.31.1.190
+
+Pinging 172.31.1.190 with 32 bytes of data:
+
+Request timed out.
+Reply from 172.31.1.190: bytes=32 time=2ms TTL=125
+Reply from 172.31.1.190: bytes=32 time=3ms TTL=125
+Reply from 172.31.1.190: bytes=32 time=2ms TTL=125
+
+Ping statistics for 172.31.1.190:
+    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 2ms, Maximum = 3ms, Average = 2ms
+
+C:\>ping 172.31.1.126
+
+Pinging 172.31.1.126 with 32 bytes of data:
+
+Reply from 172.31.1.126: bytes=32 time=8ms TTL=128
+Reply from 172.31.1.126: bytes=32 time=4ms TTL=128
+Reply from 172.31.1.126: bytes=32 time<1ms TTL=128
+Reply from 172.31.1.126: bytes=32 time<1ms TTL=128
+
+Ping statistics for 172.31.1.126:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 8ms, Average = 3ms
+
+C:\>

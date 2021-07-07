@@ -1,0 +1,22 @@
+R3>en
+R3#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#router rip
+R3(config-router)#version 2
+R3(config-router)#no auto summary
+R3(config-router)#network 192.168.4.0
+R3(config-router)#network 192.168.5.0
+R3(config-router)#passive-interface g0/0
+R3(config-router)#default-information originate
+R3(config-router)#end
+R3#
+%SYS-5-CONFIG_I: Configured from console by console
+copy run start
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+R3#copy run start
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+R3#

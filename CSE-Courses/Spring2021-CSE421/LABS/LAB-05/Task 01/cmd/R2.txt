@@ -1,0 +1,9 @@
+R2>en
+R2#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#ip route 172.31.1.0 255.255.255.120 s0/0/0
+%Default route without gateway, if not a point-to-point interface, may impact performance
+%Inconsistent address and mask
+R2(config)#ip route 172.31.1.0 255.255.255.128 172.31.1.194
+R2(config)#ip route 172.31.1.128 255.255.255.192 172.31.1.198
+R2(config)#
