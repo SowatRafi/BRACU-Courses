@@ -2,3 +2,10 @@
 *.xml
 *.iml
 *.class
+*.zip
+*.rar
+*.pptx
+**/Spring2021-CSE421/CSE421/
+**/Spring2021-CSE421/Lab sol/
+__pycache__
+__init__.py
