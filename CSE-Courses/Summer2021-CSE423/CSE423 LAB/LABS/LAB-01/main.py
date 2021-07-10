@@ -1,9 +1,10 @@
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 # from OpenGL.GLU import *
-from DrawPoints import BasicDrawings
+# from DrawPoints import BasicDrawings
+from DrawPoints import lab_task02
 
-draw = BasicDrawings.Drawings()
+# draw = BasicDrawings.Drawings()
 
 
 def iterate():
@@ -22,7 +23,7 @@ def showScreen():
     glColor3f(0.0, 1.0, 0.0)
 
     # call the draw methods here
-    draw.drawLine()
+    lab_task02.drawLines()
 
     glutSwapBuffers()
 
