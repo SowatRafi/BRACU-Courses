@@ -1,9 +1,11 @@
 from OpenGL.GL import *
 
+
 def Point():
     glBegin(GL_POINTS)
     glVertex2f(350, 100)
     glEnd()
+
 
 def drawLines():
     glPointSize(5)
