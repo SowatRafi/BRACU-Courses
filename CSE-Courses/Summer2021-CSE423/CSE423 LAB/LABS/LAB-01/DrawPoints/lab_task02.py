@@ -1,5 +1,9 @@
 from OpenGL.GL import *
 
+def Point():
+    glBegin(GL_POINTS)
+    glVertex2f(350, 100)
+    glEnd()
 
 def drawLines():
     glPointSize(5)
@@ -71,9 +75,5 @@ def drawLines():
     # Line 18
     glVertex2f(220, 220)
     glVertex2f(220, 180)
-
-    # glBegin(GL_POINT)
-    # glVertex2f(0, 1)
-    # glEnd()
 
     glEnd()
